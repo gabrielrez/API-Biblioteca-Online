@@ -8,6 +8,7 @@ require __DIR__ . '/../vendor/autoload.php';
 require '../classes/LivroDAO.php';
 
 $app = AppFactory::create();
+header("Access-Control-Allow-Origin: *");
 
 $app->get('/livros', function (Request $request, Response $response, array $args) {
   $livroDAO = new LivroDAO;
