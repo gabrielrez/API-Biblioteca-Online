@@ -10,7 +10,7 @@ async function fetchLivros(){
       item.innerHTML = `
       <div class="book-title">${livro.titulo}</div>
       <div><strong>Autor:</strong> ${livro.autor}</div>
-      <div><strong>Ano de Publicação:</strong> ${livro.ano}</div>
+      <div><strong>Ano de Publicação:</strong> ${livro.ano_publicacao}</div>
       <div><strong>Gênero:</strong> ${livro.genero}</div>
     `;
     lista.appendChild(item);
