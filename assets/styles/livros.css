@@ -1,3 +1,5 @@
+@import url(modal.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,10 @@ body {
   padding: 32px;
   max-width: 1028px;
   margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
 }
 
 header {
@@ -36,6 +42,12 @@ header {
   border: 1px solid #ddd;
   border-radius: 5px;
   width: 300px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.list-item:hover {
+  scale: 0.98;
 }
 
 .book-title {
