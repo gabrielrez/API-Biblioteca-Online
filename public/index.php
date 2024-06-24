@@ -9,6 +9,8 @@ require '../classes/LivroDAO.php';
 
 $app = AppFactory::create();
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 $app->get('/livros', function (Request $request, Response $response, array $args) {
   $livroDAO = new LivroDAO;
@@ -21,7 +23,7 @@ $app->post('/livros/add', function (Request $request, Response $response, array 
   $data = $request->getParsedBody();
   $livroDAO = new LivroDAO;
   $livro = new Livro($data['titulo'], $data['autor'], $data['ano_publicacao'], $data['genero']);
-  $livroDAO->adcionarLivro($livro);
+  $livroDAO->adicionarLivro($livro);
 });
 
 $app->put('/livros/atualizar/{id}', function (Request $request, Response $response, array $args) {

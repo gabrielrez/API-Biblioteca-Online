@@ -17,29 +17,31 @@
   </ul>
 
   <div class="modal">
-    <form action="" class="modal-box">
+    <form id="book-form" method="post" class="modal-box">
       <div class="input">
         <label>Titulo</label>
-        <input type="text" placeholder="Titulo do livro">
+        <input id="titulo" type="text" placeholder="Titulo do livro" required>
       </div>
       <div class="input">
         <label>Autor</label>
-        <input type="text" placeholder="Nome do autor">
+        <input id="autor" type="text" placeholder="Nome do autor" required>
       </div>
       <div class="input">
         <label>Ano de publicação</label>
-        <input type="text" placeholder="Ano-Mes-Dia">
+        <input id="ano_publicacao" type="text" placeholder="Ano-Mes-Dia" required>
       </div>
       <div class="input">
         <label>Gênero</label>
-        <input type="text" placeholder="Gênero do livro">
+        <input id="genero" type="text" placeholder="Gênero do livro" required>
       </div>
-      <button>Adicionar</button>
+      <button type="submit">Adicionar</button>
     </form>
   </div>
+
 </body>
 
 <script src="../assets/js/livros.js"></script>
 <script src="../assets/js/modal.js"></script>
+<script src="../assets/js/form.js"></script>
 
 </html>

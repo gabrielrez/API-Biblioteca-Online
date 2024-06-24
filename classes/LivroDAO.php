@@ -5,7 +5,7 @@ require '../config/Database.php';
 
 class LivroDAO
 {
-  public function adcionarLivro(Livro $livro)
+  public function adicionarLivro(Livro $livro)
   {
     $conn = Database::getConn();
     $stmt = $conn->prepare('INSERT INTO livro (titulo, autor, ano_publicacao, genero) VALUES (?, ?, ?, ?)');
